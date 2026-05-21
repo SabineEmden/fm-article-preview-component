@@ -6,6 +6,25 @@
     format("woff2-variations");
 }
 
+:root {
+  /* Colors */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey-900: hsl(217, 19%, 35%);
+  --clr-grey-500: hsl(214, 17%, 51%);
+  --clr-grey-400: hsl(212, 23%, 69%);
+  --clr-grey-200: hsl(210, 46%, 95%);
+  /* Spacing */
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-700: 3.5rem;
+  --spacing-800: 4rem;
+  --spacing-1300: 6.5rem;
+  --spacing-2000: 10rem;
+}
+
 body {
   font-family: "Manrope", sans-serif;
 }
