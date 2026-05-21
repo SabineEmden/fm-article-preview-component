@@ -42,9 +42,22 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Manrope", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--clr-grey-200);
+  min-height: 100svh;
+  padding: var(--spacing-300);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: var(--spacing-300);
 }
 
 img,
@@ -126,4 +139,12 @@ h6 {
 
 .medium {
   font-weight: 500;
+}
+
+/* ARTICLE PREVIEW COMPONENT */
+.preview {
+  background-color: var(--clr-white);
+  border-radius: 0.625rem;
+  box-shadow: 0 40px -10px hsla(210, 29%, 84%, 0.5);
+  overflow: hidden;
 }
