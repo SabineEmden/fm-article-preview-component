@@ -28,3 +28,31 @@
 body {
   font-family: "Manrope", sans-serif;
 }
+
+/* TYPOGRAPHY */
+.text-preset-1 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  letter-spacing: 0.25px;
+}
+
+.text-preset-2 {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  letter-spacing: 0.12%;
+}
+
+.text-preset-3 {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  letter-spacing: 25%;
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.medium {
+  font-weight: 500;
+}
