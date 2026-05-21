@@ -85,6 +85,21 @@ h6 {
   text-wrap: balance;
 }
 
+/* UTILITIES */
+/*
+  Based on Josh Comeau's VisuallyHidden React component
+  https://www.joshwcomeau.com/snippets/react-components/visually-hidden/
+ */
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0); /* Legacy property for Internet Explorer */
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 /* TYPOGRAPHY */
 .text-preset-1 {
   font-size: 1.25rem;
