@@ -203,8 +203,43 @@ h6 {
   --share-btn-background: var(--clr-grey-500);
 }
 
+.popover {
+  display: flex;
+  gap: var(--spacing-300);
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--clr-grey-900);
+  border-color: transparent;
+  border-radius: 0.626rem;
+  padding: var(--spacing-200) var(--spacing-400);
+}
+
+.popover__share {
+  display: flex;
+  gap: var(--spacing-300);
+  align-items: center;
+  color: var(--clr-grey-400);
+}
+
+.popover__socials {
+  display: flex;
+  gap: var(--spacing-200);
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.social-link {
+  color: var(--clr-white);
+}
+
+.social-link:hover {
+  color: var(--clr-grey-400);
+}
+
 /* ARTICLE PREVIEW COMPONENT */
 .preview {
+  anchor-name: --preview-box;
   display: grid;
   gap: var(--spacing-400);
   background-color: var(--clr-white);
