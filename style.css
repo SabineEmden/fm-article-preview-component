@@ -203,7 +203,7 @@ h6 {
   --share-btn-background: var(--clr-grey-500);
 }
 
-.popover {
+.popover:popover-open {
   display: flex;
   gap: var(--spacing-300);
   align-items: center;
