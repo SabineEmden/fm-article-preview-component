@@ -203,15 +203,26 @@ h6 {
   --share-btn-background: var(--clr-grey-500);
 }
 
+.popover {
+  background-color: var(--clr-grey-900);
+  border-color: transparent;
+  border-radius: 0 0 0.625rem 0.625rem;
+  width: auto;
+  position: absolute;
+  position-anchor: --preview-card;
+  inset: auto;
+  margin: 0;
+  left: anchor(left);
+  right: anchor(right);
+  bottom: anchor(bottom);
+  padding: var(--spacing-200) var(--spacing-400);
+}
+
 .popover:popover-open {
   display: flex;
   gap: var(--spacing-300);
   align-items: center;
   justify-content: space-between;
-  background-color: var(--clr-grey-900);
-  border-color: transparent;
-  border-radius: 0.626rem;
-  padding: var(--spacing-200) var(--spacing-400);
 }
 
 .popover__share {
@@ -239,7 +250,8 @@ h6 {
 
 /* ARTICLE PREVIEW COMPONENT */
 .preview {
-  anchor-name: --preview-box;
+  anchor-name: --preview-card;
+  position: relative;
   display: grid;
   gap: var(--spacing-400);
   background-color: var(--clr-white);
