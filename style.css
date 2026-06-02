@@ -178,6 +178,7 @@ h6 {
   --share-btn-icon: var(--clr-grey-500);
   --share-btn-background: var(--clr-grey-200);
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   color: var(--share-btn-icon);
@@ -201,21 +202,31 @@ h6 {
 .share-btn--dark {
   --share-btn-icon: var(--clr-white);
   --share-btn-background: var(--clr-grey-500);
+
+  @media (width >= 36rem) {
+    display: none;
+  }
 }
 
 .popover {
   background-color: var(--clr-grey-900);
   border-color: transparent;
-  border-radius: 0 0 0.625rem 0.625rem;
-  width: auto;
+  border-radius: 0.625rem;
   position: absolute;
-  position-anchor: --preview-card;
+  position-area: top;
   inset: auto;
-  margin: 0;
-  left: anchor(left);
-  right: anchor(right);
-  bottom: anchor(bottom);
+  margin: 0 0 32px 0;
   padding: var(--spacing-200) var(--spacing-400);
+
+  @media (width < 36rem) {
+    position-anchor: --preview-card;
+    left: anchor(left);
+    right: anchor(right);
+    bottom: anchor(bottom);
+    border-radius: 0 0 0.625rem 0.625rem;
+    width: anchor-size(width);
+    margin-bottom: 0;
+  }
 }
 
 .popover:popover-open {
@@ -227,6 +238,7 @@ h6 {
 
 .popover__share {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--spacing-300);
   align-items: center;
   color: var(--clr-grey-400);
@@ -241,6 +253,7 @@ h6 {
 }
 
 .social-link {
+  flex-shrink: 0;
   color: var(--clr-white);
 }
 
@@ -248,10 +261,14 @@ h6 {
   color: var(--clr-grey-400);
 }
 
+.social-link svg {
+  width: 1.25rem;
+  height: auto;
+}
+
 /* ARTICLE PREVIEW COMPONENT */
 .preview {
   anchor-name: --preview-card;
-  position: relative;
   display: grid;
   gap: var(--spacing-400);
   background-color: var(--clr-white);
