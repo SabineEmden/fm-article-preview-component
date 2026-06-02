@@ -24,6 +24,8 @@
   --spacing-1000: 5rem;
   --spacing-1300: 6.5rem;
   --spacing-2000: 10rem;
+  /* Border radius */
+  --radius: 0.625rem;
 }
 
 /* BASELINE STYLES */
@@ -211,19 +213,20 @@ h6 {
 .popover {
   background-color: var(--clr-grey-900);
   border-color: transparent;
-  border-radius: 0.625rem;
+  border-radius: var(--radius);
   position: absolute;
   position-area: top;
   inset: auto;
-  margin: 0 0 32px 0;
+  margin: 0 0 var(--spacing-400) 0;
   padding: var(--spacing-200) var(--spacing-400);
+  /* TODO: Style as speech bubble */
 
   @media (width < 36rem) {
     position-anchor: --preview-card;
     left: anchor(left);
     right: anchor(right);
     bottom: anchor(bottom);
-    border-radius: 0 0 0.625rem 0.625rem;
+    border-radius: 0 0 var(--radius) var(--radius);
     width: anchor-size(width);
     margin-bottom: 0;
   }
@@ -272,7 +275,7 @@ h6 {
   display: grid;
   gap: var(--spacing-400);
   background-color: var(--clr-white);
-  border-radius: 0.625rem;
+  border-radius: var(--radius);
   box-shadow: 0 40px -10px hsla(210, 29%, 84%, 0.5);
   overflow: hidden;
 
